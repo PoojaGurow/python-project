@@ -33,7 +33,7 @@ def Your_score(score):
 
 def our_snake(snake_block, snake_list):
     for x in snake_list:
-        pygame.draw.react(dis, black, [x[0], x[1], snake_block, snake_block])
+        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
 
 
 def message(msg, color):
@@ -112,11 +112,13 @@ def gameLoop():
         our_snake(snake_block, snake_List)
         Your_score(Length_of_snake - 1)
 
+        pygame.display.update()
+
         if x1 == foodx and y1 == foody:
             foodx = round(
-                random.randrange(0, dis_width - snake) / 10.0) * 10.0
+                random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
             foody = round(
-                random.randrange(0, dis_height - snake) / 10.0) * 10.0
+                random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
             Length_of_snake += 1
 
         clock.tick(snake_speed)
