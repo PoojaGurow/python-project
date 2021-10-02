@@ -9,7 +9,7 @@ for i in w:
         prepartner.append(i)
     if(i in list2):
         postpartner.append(i)
-for j in preparner:
+for j in prepartner:
     list1index=list1.index(j)
     if(list2[list1index] in postpartner):#testing if all prepartners has postpartners
         pass
@@ -33,7 +33,7 @@ count=0
 for l in prepartner1:
     if(prepartner1.index(l)==postpartner1.index(list2[list1.index(l)])):#testing3b
         count+=1
-if(count==len(prepartnr1)):
+if(count==len(prepartner1)):
     print("GAME WON")
 else:
     print("GAME LOST")
