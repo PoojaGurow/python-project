@@ -1,4 +1,4 @@
-
+# import all functions from the tkinter 
 from tkinter import * 
 from tkinter import messagebox 
 def tell_weather() : 
@@ -40,27 +40,28 @@ if __name__ == "__main__" :
 	root = Tk() 
 	root.title("Weather Application") 
 
-	
+	# Set the background colour of GUI window 
 	root.configure(background = "light blue") 
 
-	
+	# Set the configuration of GUI window 
 	root.geometry("425x175") 
 
-
+        # Create a Weather Gui Application label 
 	headlabel = Label(root, text = "Weather Gui Application", fg = 'white', bg = 'Black') 
 	
-
+        # Create a City name : label 
 	label1 = Label(root, text = "City name : ", fg = 'white', bg = 'dark gray') 
 
- 
+        # Create a City name : label
 	label2 = Label(root, text = "Temperature :", fg = 'white', bg = 'dark gray') 
 
-	
+	# Create a atm pressure : label 
 	label3 = Label(root, text = "atm pressure :", fg = 'white', bg = 'dark gray') 
-
+        
+	# Create a humidity : label 
 	label4 = Label(root, text = "humidity :", fg = 'white', bg = 'dark gray') 
 
-
+        # Create a description :label 
 	label5 = Label(root, text = "description :", fg = 'white', bg = 'dark gray') 
 	
 	headlabel.grid(row = 0, column = 1) 
@@ -89,5 +90,5 @@ if __name__ == "__main__" :
 	button1.grid(row = 2, column = 1) 
 	button2.grid(row = 7, column = 1) 
 	
- 
+ 	# Start the GUI 
 	root.mainloop() 
